@@ -336,63 +336,49 @@ ul { list-style: none; }
     flex-shrink: 0;
 }
 
-/* Hero Visual / Cards */
+/* Hero Visual / Photo */
 .hero-visual {
     position: relative;
-    height: 420px;
+    height: 520px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-photo-wrapper {
+    position: relative;
+    width: 380px;
+    height: 480px;
+    z-index: 1;
+}
+
+.hero-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-xl);
+    position: relative;
+    z-index: 2;
+}
+
+.hero-photo-accent {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    right: -16px;
+    bottom: -16px;
+    border-radius: var(--radius-xl);
+    border: 3px solid var(--teal-700);
+    z-index: 1;
+    opacity: 0.3;
 }
 
 .hero-card {
     border-radius: var(--radius-lg);
     background: var(--white);
     box-shadow: var(--shadow-xl);
-}
-
-.hero-card-main {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    padding: 40px;
-    text-align: center;
-    width: 280px;
-    border: 1px solid var(--gray-200);
-}
-.hero-card-icon {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 72px;
-    height: 72px;
-    border-radius: var(--radius-md);
-    background: var(--teal-50);
-    color: var(--teal-700);
-    margin-bottom: 16px;
-}
-.hero-card-label {
-    font-size: 0.8rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    color: var(--gray-400);
-    margin-bottom: 8px;
-}
-.hero-card-value {
-    font-family: var(--font-heading);
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: var(--teal-800);
-}
-.hero-card-value span {
-    font-family: var(--font-body);
-    font-size: 0.85rem;
-    font-weight: 400;
-    color: var(--gray-400);
-}
-.hero-card-desc {
-    font-size: 0.8rem;
-    color: var(--gray-400);
-    margin-top: 4px;
 }
 
 .hero-card-float {
